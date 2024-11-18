@@ -6,7 +6,12 @@ int main()
     int numeroLinhasA = 0;
     int numeroColunasA = 0;
     int numeroLinhasB = 0;
-    int numeroColunasB = 0;    
+    int numeroColunasB = 0;  
+
+    int numero = 0;
+	
+	int arrayA[numeroLinhasA][numeroColunasA];
+	int arrayB[numeroLinhasB][numeroColunasB];  
 
 
     printf("Digite o número de linhas do arrayA: \n");
@@ -22,16 +27,6 @@ int main()
     printf("Digite o número de colunas do arrayB: \n");
     scanf("%i", &numeroColunasB);
     
-	int numero = 0;
-	
-	int arrayA[numeroLinhasA][numeroColunasA];
-
-	int arrayB[numeroLinhasB][numeroColunasB];
-	
-// 	arrayA[0][0] = 5;
-	
-// 	printf("%i",arrayA[0][0]);
-
     if(numeroColunasA == numeroLinhasB){
         
     for(int i = 0 ; i < numeroLinhasA; i++) {
@@ -41,45 +36,25 @@ int main()
             
             arrayA[i][j] = numero;
         }
-
 	}
 	
-	   for(int i = 0 ; i <numeroLinhasB; i++) {
+	for(int i = 0 ; i <numeroLinhasB; i++) {
         for(int j = 0; j < numeroColunasB; j++){
             printf("Digite o número do arrayB na posição: %i %i \n", i, j);
             scanf("%i", &numero);
             
-            arrayB [i][j] = numero;
+            arrayB[i][j] = numero;
         }
+    }
         
-        for(int i = 0 ; i < 5; i++){
-            for(int j = 0; i <5 ; j++){
-                arrayA[0][0] * arrayB[0][0] + arrayA[0][1] * arrayB[1][0]
-                
-                arrayA[1][0] * arrayB[]
-                
-                
-                
-                
+    for(int i = 0 ; i < 5; i++){
+        for(int j = 0; i <5 ; j++){
+                       
             }
         }
-        
-        
-        
-        
-        
-	}
+
     }else {
         printf("Aprenda a digitar direito");
     }
-
-
-
-
-	
-	
-
-
-
-	return 0;
+    return 0;
 }
