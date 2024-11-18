@@ -20,16 +20,10 @@ int main()
             break;
         }
         
-        while(true){
-            if(numero % i ==0){
+        for(int j = 1; j <= numero; j++){
+            if(numero % j == 0){
                 soma++;
             }
-            
-            if(i == numero){
-                break;
-            }
-            
-            i++;
         }
         
         if(soma > 2){
