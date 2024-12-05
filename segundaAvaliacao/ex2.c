@@ -1,18 +1,12 @@
 #include <stdio.h>
 
-float areaRet(float altura, float comprimento) {
-	return altura * comprimento;
-}
-
-
 int main()
 {
 	int matriz[4][4];
 	int num;
 	
-	int somaMatrizPrincipal = 0;
-	
-	int somaMatrizSecunAcima = 0;
+	int somaDiagonalCima = 0;
+    int somaDiagonalBaixo = 0;
 
 	for(int i = 0; i < 4; i++) {
 		for(int j = 0; j < 4; j++) {
@@ -30,24 +24,35 @@ int main()
         printf("\n");
     }
     
+    // DIAGONAL SECUNDARIA DE CIMA
     int j = 1;
-    for(int i = 0; i < 4; i++) {
+    for(int i = 0; i < 3; i++) {
 
-        somaMatrizPrincipal = somaMatrizPrincipal + matriz[i][j];
+        somaDiagonalCima = somaDiagonalCima + matriz[i][j];
+
+        printf("Matriz no ponto:  %i %i eh o numero: %i %i",i, j, matriz[i][j]);
         
-        if(j < 4){
+        if(j < 3){
+            j = j + 1;
+        }
+    }
+
+    //DIAGONAL SECUNDARIA DE BAIXO
+    j = 0;
+    for(int i = 1; i < 4; i++) {
+
+        somaDiagonalBaixo = somaDiagonalBaixo + matriz[i][j];
+
+        printf("Matriz no ponto:  %i %i eh o numero: %i %i",i, j, matriz[i][j]);
+        
+        if(j < 3){
             j = j + 1;
         }
     }
     
-    printf("Soma da diagonal principal: %i \n", somaMatrizPrincipal);
-    
-    for(int i = 0; i < 3; i++) {
-        for(int j = 1; j < 3; j++) {
-        
-        printf("%i", matriz[i][j]);
-        }
-    }
+    printf("Soma da diagonal secundaria de cima: %i \n", somaDiagonalCima);
+
+    printf("Soma da diagonal secundaria de baixo: %i \n", somaDiagonalBaixo);
     
 	return 0;
 }
